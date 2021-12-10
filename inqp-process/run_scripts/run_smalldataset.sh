@@ -1,15 +1,13 @@
 #!/bin/bash
 
-SPARK_HOME=/tank/hdfs/totem/slothdb/spark
-
 hdfs_root=hdfs://southport:9000
 kafka_bootstrap=lincoln:9092
 SF=5
-max_core=20
-max_mem=100G
+max_core=14
+max_mem=20G
 master=spark://southport:7077
 shuffle_num=20
-stat_dir=/tank/hdfs/totem/slothdb/slothdb_test/stat_dir
+stat_dir=/home/run_scripts/stat_dir
 query=q17
 batch_num=20
 input_partition=20
@@ -26,7 +24,7 @@ largedataset=false # largedataset: Q2, Q11, Q13, Q16, Q22
 execution_mode=0
 
 ## 0: turn off iOLAP, 1: turn on iOLAP
-iolap=1
+iolap=0
 
 ## Percentage of choosing the right incrementability
 inc_percentage=1.0
@@ -48,7 +46,7 @@ sample_time=0.07
 ## Spike rate
 spike_rate=1.0
 
-for query in q11
+for query in q1
 #for query in q1 q3 q4 q5 q6 q7 q8 q9 q10 q12 q14 q17 q18 q19 q20 q21
 do
 	for execution_mode in 0
