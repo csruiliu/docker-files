@@ -49,10 +49,6 @@ COPY hdfs-site.xml $HADOOP_HOME/etc/hadoop
 COPY hadoop-env.sh $HADOOP_HOME/etc/hadoop
 COPY slaves $HADOOP_HOME/etc/hadoop
 
-# WORKDIR /home
-# RUN nohup zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties > zookeeper.out 2>&1 &
-# RUN nohup kafka-server-start.sh $KAFKA_HOME/config/server.properties > kafka.out 2>&1 &
-
 # permit root ssh login
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
@@ -63,5 +59,3 @@ EXPOSE 9092
 EXPOSE 9000
 EXPOSE 50090
 EXPOSE 7077
-
-# CMD ["/etc/init.d/ssh", "start"]
