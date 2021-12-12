@@ -35,9 +35,8 @@ ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
 ENV SCALA_HOME=/usr/local/scala/scala-2.11.12
 ENV SPARK_HOME=/usr/local/spark/spark-2.4.0-bin-hadoop2.6
 ENV HADOOP_HOME=/usr/local/hadoop/hadoop-2.6.5
-ENV HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
 ENV KAFKA_HOME=/usr/local/kafka/kafka_2.11-2.1.0
-ENV PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$HADOOP_HOME/sbin:$KAFKA_HOME/bin:$SCALA_HOME/bin:$SPARK_HOME/bin:$PATH
+ENV PATH=$JAVA_HOME/bin:$HADOOP_HOME/bin:$KAFKA_HOME/bin:$SCALA_HOME/bin:$SPARK_HOME/bin:$PATH
 ENV CLASSPATH=$JAVA_HOME/lib/
 
 # copy files

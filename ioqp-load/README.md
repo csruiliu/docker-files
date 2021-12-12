@@ -12,7 +12,7 @@
 
 ### Run docker container ### 
 
-1. docker run -it -P -v /home/ruiliu/Develop/tpch-data:/home/tpch-data --hostname lincoln --name lincoln_container --rm csruiliu/inqp-load 
+1. docker run -it -P -v /home/ruiliu/Develop/tpch-data:/home/tpch-data --hostname lincoln --name lincoln_container --rm csruiliu/ioqp-load 
 
 ### Inside docker container ### 
 
@@ -22,9 +22,11 @@
 4. nohup kafka-server-start.sh $KAFKA_HOME/config/server.properties > kafka.out 2>&1 &
 5. /home/deploy_script/create_topic.sh
 6. hdfs namenode -format
-7. start-dfs.sh [hadoop]
-8. start-all.sh [spart]
-9. /home/deploy_script/reset.sh to remove checkpoint files
+7. $HADOOP_HOME/sbin/start-dfs.sh
+8. $SPARK_HOME/sbin/start-all.sh
+9. /home/deploy_script/reset.sh to remove checkpoint files, if necessary
+
+Then, run `/home/run_script/load_tpch.sh` to start loading data.
 
 Starting another terminal process on the same container by
 
@@ -32,4 +34,4 @@ Starting another terminal process on the same container by
 docker exec -it <container_id> bash
 ```
 
-Then, run `/home/deploy_script/get_offset.sh` to see the loading progress 
+Running `/home/run_script/get_offset.sh` to see the loading progress 
