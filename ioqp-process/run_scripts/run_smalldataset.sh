@@ -3,6 +3,7 @@
 hdfs_root=hdfs://southport:9000
 kafka_bootstrap=lincoln:9092
 SF=5
+SR=0.9
 max_core=14
 max_mem=20G
 master=spark://southport:7077
@@ -74,20 +75,20 @@ do
 				       	$kafka_bootstrap \
 				       	$query \
 				       	$batch_num \
-					$shuffle_num \
-					$stat_dir \
+						$shuffle_num \
+						$stat_dir \
 				       	$SF \
 				       	$hdfs_root \
-					$execution_mode \
-					$input_partition \
-					$constraint \
-					$largedataset \
-					$iolap \
-					$inc_percentage \
-					$cost_bias \
-					$max_step \
-					$sample_time \
-					$spike_rate
+						$execution_mode \
+						$input_partition \
+						$constraint \
+						$largedataset \
+						$iolap \
+						$inc_percentage \
+						$cost_bias \
+						$max_step \
+						$sample_time \
+						$SR
 			done
 		done
 	done

@@ -14,8 +14,9 @@
 
 ### Inside docker container ### 
 
-1. ioqp/build/mvn clean
-2. ioqp/build/sbt [java-home has been set]
-3. type `project middle-ground` and `package` during the sbt compilation
-4. extract ioqp/middle-ground/target/scala-2.11/totem-middle-ground_2.11-2.4.0.jar 
+1. cd /home/ioqp
+2. ./build/mvn clean
+3. ./build/sbt [java-home should be set]
+4. type `project middle-ground` and `package` during the sbt compilation
+5. extract ioqp/middle-ground/target/scala-2.11/totem-middle-ground_2.11-2.4.0.jar 
 
