@@ -22,7 +22,7 @@
 # remote nodes.
 
 # The java implementation to use.
-export JAVA_HOME=/usr/local/java/jdk1.8.0_301
+export JAVA_HOME="/usr/local/java/jdk1.8.0_301"
 
 # The jsvc implementation to use. Jsvc is required to run secure datanodes
 # that bind to privileged ports to provide authentication of data transfer
