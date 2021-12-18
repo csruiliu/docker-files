@@ -44,15 +44,15 @@ COPY jars/* $SPARK_HOME/jars/
 COPY deploy_script /home/deploy_script
 COPY run_script /home/run_script
 
-COPY core-site.xml $HADOOP_HOME/etc/hadoop
-COPY hdfs-site.xml $HADOOP_HOME/etc/hadoop
-COPY hadoop-env.sh $HADOOP_HOME/etc/hadoop
-COPY slaves $HADOOP_HOME/etc/hadoop
+COPY conf/core-site.xml $HADOOP_HOME/etc/hadoop
+COPY conf/hdfs-site.xml $HADOOP_HOME/etc/hadoop
+COPY conf/hadoop-env.sh $HADOOP_HOME/etc/hadoop
+COPY conf/slaves $HADOOP_HOME/etc/hadoop
 
-COPY log4j.properties $SPARK_HOME/conf
-COPY slaves $SPARK_HOME/conf
-COPY spark-defaults.conf $SPARK_HOME/conf
-COPY spark-env.sh $SPARK_HOME/conf
+COPY conf/log4j.properties $SPARK_HOME/conf
+COPY conf/slaves $SPARK_HOME/conf
+COPY conf/spark-defaults.conf $SPARK_HOME/conf
+COPY conf/spark-env.sh $SPARK_HOME/conf
 
 # permit root ssh login
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
