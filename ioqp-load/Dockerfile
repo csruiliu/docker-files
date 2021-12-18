@@ -43,10 +43,16 @@ ENV CLASSPATH=$JAVA_HOME/lib/
 COPY jars/* $SPARK_HOME/jars/
 COPY deploy_script /home/deploy_script
 COPY run_script /home/run_script
+
 COPY core-site.xml $HADOOP_HOME/etc/hadoop
 COPY hdfs-site.xml $HADOOP_HOME/etc/hadoop
 COPY hadoop-env.sh $HADOOP_HOME/etc/hadoop
 COPY slaves $HADOOP_HOME/etc/hadoop
+
+COPY log4j.properties $SPARK_HOME/conf
+COPY slaves $SPARK_HOME/conf
+COPY spark-defaults.conf $SPARK_HOME/conf
+COPY spark-env.sh $SPARK_HOME/conf
 
 # permit root ssh login
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
@@ -58,3 +64,4 @@ EXPOSE 9092
 EXPOSE 9000
 EXPOSE 50090
 EXPOSE 7077
+
