@@ -3,8 +3,9 @@
 ## Dependency ##
 
 1. jdk 1.8 (301)
-2. spark 2.4.0 (hadoop2.6)
-3. inqp-load containter (launch and setup) 
+2. scala 2.11.12
+3. spark 2.4.0 (hadoop2.6)
+4. inqp-load containter (launch and setup) 
 
 ## Run ##
 
