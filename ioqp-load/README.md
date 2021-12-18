@@ -4,9 +4,9 @@
 
 1. hadoop 2.6.5
 2. jdk 1.8 (301)
-3. kafka 2.11-2.1.0
-4. spark 2.4.0 (hadoop2.6)
-5. scala 2.11.12
+3. scala 2.11.12
+4. kafka 2.11-2.1.0
+5. spark 2.4.0 (hadoop2.6)
 
 ## Run ##
 
