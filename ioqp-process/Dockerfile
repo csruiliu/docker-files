@@ -33,6 +33,11 @@ ENV CLASSPATH=$JAVA_HOME/lib/
 COPY jars/* $SPARK_HOME/jars/
 COPY run_scripts /home/run_scripts
 
+COPY conf/log4j.properties $SPARK_HOME/conf
+COPY conf/slaves $SPARK_HOME/conf
+COPY conf/spark-defaults.conf $SPARK_HOME/conf
+COPY conf/spark-env.sh $SPARK_HOME/conf
+
 # permit root ssh login
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
