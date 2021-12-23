@@ -3,8 +3,7 @@
 ## Dependency ##
 
 1. JDK 8 (301)
-2. maven 3.8.4 (latest version at the time of development)
-3. scala 2.11.12
+2. scala 2.11.12
 
 ## Run ##
 
