@@ -20,7 +20,7 @@ Pin: origin nvidia.github.io
 Pin-Priority: 1002
 ```
 
-Then, you can following the [instruction](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
+Then, you can following the [instruction](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) to install the `nvidia-docker2`. Alternatively, the `$distribution` can be replaced with a specific OS version like `ubuntu20.04`.
 
 ```
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add - \
