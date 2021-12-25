@@ -15,12 +15,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
-RUN apt install -y curl
-RUN apt install -y wget
-RUN apt install -y maven
-RUN apt install -y vim
-RUN apt install -y openssh-client
-RUN apt install -y openssh-server
+RUN apt install -y curl wget maven vim openssh-client openssh-server
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
@@ -42,9 +37,4 @@ COPY conf/spark-env.sh $SPARK_HOME/conf
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 # expose ports
-EXPOSE 2181
-EXPOSE 22
-EXPOSE 9092
-EXPOSE 9000
-EXPOSE 50090
-EXPOSE 7077
+EXPOSE 2181 22 9092 9000 50090 7077
