@@ -11,8 +11,7 @@ RUN mkdir /usr/local/scala
 ADD scala-2.11.12.tgz /usr/local/scala
 
 # install necessary libs
-RUN apt install -y curl
-RUN apt install -y wget
+RUN apt install -y curl wget
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
