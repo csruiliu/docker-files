@@ -15,7 +15,7 @@ kafka_bootstrap=lincoln:9092
 scale_factor=5 
 
 # sample ratio for running
-sample_ratio=0.9 
+sample_ratio=1.0
 
 ## the total number of logical cores that spark-shell can use
 max_core=14
@@ -75,6 +75,9 @@ sample_time=0.07
 ## Spike rate
 spike_rate=1.0
 
+## Trigger interval (milliseconds)
+trigger_interval=10
+
 ## qury for testing
 query=q1
 
@@ -100,7 +103,8 @@ $SPARK_HOME/bin/spark-submit --total-executor-cores $max_core \
                                 $cost_bias \
                                 $max_step \
                                 $sample_time \
-                                $sample_ratio
+                                $sample_ratio \
+				$trigger_interval
 
 
 
