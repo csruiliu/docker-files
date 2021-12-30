@@ -76,7 +76,10 @@ sample_time=0.07
 spike_rate=1.0
 
 ## Trigger interval (milliseconds)
-trigger_interval=10
+trigger_interval=100
+
+## Aggregation interval (milliseconds)
+aggregation_interval=50
 
 ## qury for testing
 query=q1
@@ -104,7 +107,5 @@ $SPARK_HOME/bin/spark-submit --total-executor-cores $max_core \
                                 $max_step \
                                 $sample_time \
                                 $sample_ratio \
-				$trigger_interval
-
-
-
+				$trigger_interval \
+                                $aggregation_interval
