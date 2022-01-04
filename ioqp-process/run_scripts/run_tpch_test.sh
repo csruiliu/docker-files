@@ -24,7 +24,7 @@ max_core=14
 max_mem=10G
 
 ## entry point for your application
-entry_class=totem.middleground.tpch.QueryTPCH
+entry_class=ruiliu.relaqs.tpch.QueryTPCH
 
 ## number of shuffle for entry class
 shuffle_num=20
@@ -89,7 +89,7 @@ $SPARK_HOME/bin/spark-submit --total-executor-cores $max_core \
                              --class $entry_class \
                              --master $master \
                              --conf "${java_opt}" \
-                                $SPARK_HOME/jars/totem-middle-ground_2.11-2.4.0.jar \
+                                $SPARK_HOME/jars/ruiliu-relaqs_2.11-2.4.0.jar \
                                 $kafka_bootstrap \
                                 $query \
                                 $batch_num \
