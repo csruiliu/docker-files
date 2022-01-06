@@ -14,5 +14,5 @@ cp $HOME/Develop/ioqp/external/kafka-0-10-sql/target/scala-2.11/spark-sql-kafka-
 docker image rm csruiliu/ioqp-load:latest
 docker image rm csruiliu/ioqp-process:latest
 
-docker build -t csruiliu/ioqp-load $HOME/Develop/docker-files/ioqp-load
-docker build -t csruiliu/ioqp-process $HOME/Develop/docker-files/ioqp-process
+docker build --no-cache -t csruiliu/ioqp-load $HOME/Develop/docker-files/ioqp-load
+docker build --no-cache -t csruiliu/ioqp-process $HOME/Develop/docker-files/ioqp-process
