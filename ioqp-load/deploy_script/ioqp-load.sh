@@ -10,8 +10,8 @@ sleep 1
 sleep 1
 hdfs namenode -format
 sleep 1
-./setup-password.sh
-./setup-hadoop.sh
-./setup-spark.sh
+/home/deploy_script/setup-password.sh
+/home/deploy_script/setup-hadoop.sh
+/home/deploy_script/setup-spark.sh
 sleep 1
 /home/run_script/load_tpch.sh
