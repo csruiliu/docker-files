@@ -15,7 +15,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
-RUN apt install -y curl wget maven vim openssh-client openssh-server
+RUN apt install -y curl wget maven vim openssh-client openssh-server expect
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
@@ -27,6 +27,7 @@ ENV CLASSPATH=$JAVA_HOME/lib/
 # copy files
 COPY jars/* $SPARK_HOME/jars/
 COPY run_scripts /home/run_scripts
+COPY deploy_scripts /home/deploy_scripts
 
 COPY conf/log4j.properties $SPARK_HOME/conf
 COPY conf/slaves $SPARK_HOME/conf
