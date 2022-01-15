@@ -1,7 +1,7 @@
 #!/bin/bash
 
 /etc/init.d/ssh start
-sleep 1
+sleep 2
 nohup zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties > zookeeper.out 2>&1 &
 sleep 1
 nohup kafka-server-start.sh $KAFKA_HOME/config/server.properties > kafka.out 2>&1 &
