@@ -23,7 +23,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
-RUN apt install -y curl wget maven vim openssh-client openssh-server
+RUN apt install -y curl wget maven vim openssh-client openssh-server expect
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
@@ -54,3 +54,5 @@ RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
 
 # expose ports
 EXPOSE 2181 22 9092 9000 50090 7077
+
+WORKDIR /home
