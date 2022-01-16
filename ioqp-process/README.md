@@ -2,10 +2,10 @@
 
 ## Dependency ##
 
-1. jdk 1.8 (301)
-2. scala 2.11.12
-3. spark 2.4.0 (hadoop2.6)
-4. inqp-load containter (launch and setup) 
++ jdk 1.8 (301)
++ scala 2.11.12
++ spark 2.4.0 (hadoop2.6)
++ inqp-load containter (launch and setup) 
 
 ## Run ##
 
@@ -17,9 +17,9 @@
 
 + /home/deploy_scripts/ioqp-process.sh
 
-### Detailed Steps ###
+Detailed steps in the `ioqp-process.sh`:
 
-+ `passwd` (set new password) and `/etc/init.d/ssh start`
-+ $SPARK_HOME/sbin/start-all.sh
+1. `passwd` (set new password) and `/etc/init.d/ssh start`
+2. $SPARK_HOME/sbin/start-all.sh
 
 Then, we can get the data from inqp-load container and run some query processing jobs, like `run_tpch_test.sh`
