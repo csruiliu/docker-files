@@ -2,14 +2,19 @@
 
 stat_dir=/home/run_scripts/stat_dir
 
-## master node url for the cluster
+tpch_static_dir=/home/run_scripts/tpch_static
+
+# master node url for the cluster
 master=spark://southport:7077
 
-## hdfs url for the cluster
+# hdfs url for the cluster
 hdfs_root=hdfs://southport:9000
 
-## kafka bootstrap server
+# kafka bootstrap server
 kafka_bootstrap=lincoln:9092
+
+# checkpoint path
+checkpoint=file:///home/tpch-checkpoint
 
 ## scale factor for tpch dataset
 scale_factor=5 
@@ -96,6 +101,7 @@ $SPARK_HOME/bin/spark-submit --total-executor-cores $max_core \
                                 $batch_num \
                                 $shuffle_num \
                                 $stat_dir \
+                                $tpch_static_dir \
                                 $scale_factor \
                                 $hdfs_root \
                                 $execution_mode \
@@ -109,4 +115,5 @@ $SPARK_HOME/bin/spark-submit --total-executor-cores $max_core \
                                 $sample_time \
                                 $sample_ratio \
 				$trigger_interval \
-                                $aggregation_interval
+                                $aggregation_interval \
+                                $checkpoint

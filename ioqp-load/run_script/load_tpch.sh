@@ -2,7 +2,8 @@
 
 DATA_ROOT=file:///home/tpch-data
 
-checkpoint=hdfs://lincoln:9000/tpch-checkpoint
+# checkpoint=hdfs://lincoln:9000/tpch-checkpoint
+checkpoint=file:///home/tpch-checkpoint
 
 master=local[14]
 largedataset=false
