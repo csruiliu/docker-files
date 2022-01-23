@@ -11,8 +11,8 @@
 
 ### Run docker container ### 
 
-+ docker run -it -P -v /home/ruiliu/Develop/ioqp/scripts:/home/scripts --hostname southport --name southport_container --link lincoln_container --rm csruiliu/ioqp-process 
-
++ docker run -it -P -v /home/ruiliu/Develop/ioqp/preemption:/home/preemption --hostname southport --name southport_container --link lincoln_container --rm csruiliu/ioqp-process 
+l
 ### Inside docker container ### 
 
 + /home/deploy_scripts/ioqp-process.sh
