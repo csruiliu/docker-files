@@ -15,7 +15,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
-RUN apt install -y curl wget maven vim openssh-client openssh-server expect python3-pip
+RUN apt install -y curl wget maven openssh-client openssh-server expect python3-pip
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
