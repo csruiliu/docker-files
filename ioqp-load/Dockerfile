@@ -25,9 +25,6 @@ ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 # install necessary libs
 RUN apt install -y curl wget maven openssh-client openssh-server expect
 
-# install necessary python libs
-RUN pip3 install numpy
-
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
 ENV SCALA_HOME=/usr/local/scala/scala-2.11.12
