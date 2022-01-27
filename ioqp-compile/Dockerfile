@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt update
+RUN apt-get update -y
 
 # add jdk file and extract
 RUN mkdir /usr/local/java
@@ -11,7 +11,7 @@ RUN mkdir /usr/local/scala
 ADD scala-2.11.12.tgz /usr/local/scala
 
 # install necessary libs
-RUN apt install -y curl wget vim
+RUN apt-get install -y curl wget
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301

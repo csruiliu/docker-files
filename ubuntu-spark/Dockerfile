@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt update
+RUN apt-get update -y
 
 # add jdk file and extract
 RUN mkdir /usr/local/java
