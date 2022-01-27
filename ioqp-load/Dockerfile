@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN apt update
+RUN apt-get update -y
 
 # add jdk file and extract
 RUN mkdir /usr/local/java
@@ -23,7 +23,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
-RUN apt install -y curl wget maven openssh-client openssh-server expect
+RUN apt-get install -y curl wget maven openssh-client openssh-server expect
 
 # config environment
 ENV JAVA_HOME=/usr/local/java/jdk1.8.0_301
