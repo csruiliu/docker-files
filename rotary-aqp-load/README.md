@@ -12,15 +12,15 @@
 
 ### Run docker container ### 
 
-+ docker run -it -P -v /home/ruiliu/Develop/tpch-data:/home/tpch-data --hostname lincoln --name lincoln_container --rm csruiliu/ioqp-load 
++ docker run -it -P -v /home/ruiliu/Develop/tpch-data:/home/tpch-data --hostname lincoln --name lincoln_container --rm csruiliu/rotary-aqp-load 
 
 ### Inside docker container ### 
 
 Deploying ioqp-load
 
-+ /home/deploy_script/ioqp-load.sh
++ /home/deploy_script/rotary-aqp-load.sh
 
-Detailed steps in the `ioqp-load.sh`:
+Detailed steps in the `rotary-aqp-load.sh`:
 
 1. `passwd` (set new password) and `/etc/init.d/ssh start`
 2. nohup zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties > zookeeper.out 2>&1 &

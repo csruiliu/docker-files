@@ -19,4 +19,4 @@ ENV SCALA_HOME=/usr/local/scala/scala-2.11.12
 ENV PATH=$JAVA_HOME/bin:$SCALA_HOME/bin:$PATH
 ENV CLASSPATH=$JAVA_HOME/lib/
 
-WORKDIR /home/ioqp
+WORKDIR /home/rotary-aqp
