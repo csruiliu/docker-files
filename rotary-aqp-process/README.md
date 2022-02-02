@@ -11,7 +11,7 @@
 
 ### Run docker container ### 
 
-+ docker run -it -P -v /home/ruiliu/Develop/rotary-aqp/preemption:/home/preemption --hostname southport --name southport_container --link lincoln_container --rm csruiliu/rotary-aqp-process 
++ docker run -it -P -v /home/ruiliu/Develop/rotary-aqp/rotary:/home/rotary --hostname southport --name southport_container --link lincoln_container --rm csruiliu/rotary-aqp-process 
 
 ### Inside docker container ### 
 
