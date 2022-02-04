@@ -85,7 +85,7 @@ spike_rate=1.0
 trigger_interval=100
 
 ## Aggregation interval (milliseconds)
-aggregation_interval=50
+aggregation_interval=100
 
 ## qury for testing
 query=q1
