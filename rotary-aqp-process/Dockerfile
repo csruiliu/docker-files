@@ -2,8 +2,6 @@ FROM ubuntu:20.04
 ENV TZ=America/Chicago
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update -y
-
 # add jdk file and extract
 RUN mkdir /usr/local/java
 ADD jdk-8u301-linux-x64.tar.gz /usr/local/java
@@ -17,6 +15,7 @@ RUN mkdir /usr/local/spark
 ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
+RUN apt-get update -y
 RUN apt-get install -y curl wget maven openssh-client openssh-server expect python3-pip
 
 # install python packages

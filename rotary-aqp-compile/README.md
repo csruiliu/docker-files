@@ -1,4 +1,4 @@
-# iOQP-Compile #
+# Rotary-AQP-Compile #
 
 ## Dependency ##
 
