@@ -24,7 +24,7 @@ sample_ratio=1.0
 
 # the total number of logical cores that spark-shell can use
 # make sure max_core * num_process <= total_cores in multi-tenancy env
-max_core=4
+max_core=1
 
 ## max memory for each executor 
 max_mem=10G
