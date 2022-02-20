@@ -16,8 +16,10 @@ kafka_bootstrap=lincoln:9092
 # checkpoint path
 checkpoint=file:///home/tpch-checkpoint
 
-## scale factor for tpch dataset
-scale_factor=5 
+# scale factor for tpch dataset
+# 0.1 for local test
+# 5 for server test
+scale_factor=0.1
 
 # sample ratio for running
 sample_ratio=1.0
@@ -26,7 +28,8 @@ sample_ratio=1.0
 # make sure max_core * num_process <= total_cores in multi-tenancy env
 max_core=1
 
-## max memory for each executor 
+# max memory for each executor 
+# higher for better execution (e.g., 20G, 30G...)  
 max_mem=10G
 
 ## entry point for your application
