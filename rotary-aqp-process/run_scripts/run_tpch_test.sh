@@ -42,7 +42,7 @@ shuffle_num=20
 batch_num=20
 
 ## number of partition for input dataset
-input_partition=1
+input_partition=20
 
 ## supply configuration for jre
 java_opt="spark.executor.extraJavaOptions=-Xms${max_mem} -XX:+UseParallelGC -XX:+UseParallelOldGC "

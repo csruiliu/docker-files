@@ -5,7 +5,9 @@ DATA_ROOT=file:///home/tpch-data
 # checkpoint=hdfs://lincoln:9000/tpch-checkpoint
 checkpoint=file:///home/tpch-checkpoint
 
-master=local[14]
+# Run Spark locally with K worker threads if local[K]
+# Ideally, set this to the number of cores on your machine
+master=local[20]
 largedataset=false
 
 $SPARK_HOME/bin/spark-submit \
