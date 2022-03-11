@@ -16,7 +16,7 @@ ADD spark-2.4.0-bin-hadoop2.6.tgz /usr/local/spark
 
 # install necessary libs
 RUN apt-get update -y
-RUN apt-get install -y curl wget vim maven openssh-client openssh-server expect python3-pip
+RUN apt-get install -y curl wget vim maven openssh-client openssh-server expect python3-pip ganglia-monitor
 
 # install python packages
 RUN pip3 install numpy scipy
@@ -37,6 +37,10 @@ COPY conf/log4j.properties $SPARK_HOME/conf
 COPY conf/slaves $SPARK_HOME/conf
 COPY conf/spark-defaults.conf $SPARK_HOME/conf
 COPY conf/spark-env.sh $SPARK_HOME/conf
+COPY conf/gmond.conf /etc/ganglia
+
+# restart ganglia service
+RUN service ganglia-monitor restart
 
 # permit root ssh login
 RUN echo "PermitRootLogin yes" >> /etc/ssh/sshd_config

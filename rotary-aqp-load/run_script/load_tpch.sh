@@ -7,7 +7,8 @@ checkpoint=file:///home/tpch-checkpoint
 
 # Run Spark locally with K worker threads if local[K]
 # Ideally, set this to the number of cores on your machine
-master=local[20]
+# master=local[20]
+master=local
 largedataset=false
 
 $SPARK_HOME/bin/spark-submit \
