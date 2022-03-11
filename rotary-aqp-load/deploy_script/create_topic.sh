@@ -1,6 +1,6 @@
 #!/bin/sh
 
-PARTITION=20
+PARTITION=1
 
 kafka-topics.sh -zookeeper localhost:2181 --create --topic Supplier --partitions $PARTITION --replication-factor 1
 kafka-topics.sh -zookeeper localhost:2181 --create --topic Part --partitions $PARTITION --replication-factor 1
